@@ -1,0 +1,13 @@
+.button {
+    display: inline;
+    float: right;
+    margin-right: 70px;
+    padding: 10px 20px 10px 20px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    color: blue;
+    margin-top: -10px;
+}
