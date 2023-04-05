@@ -19,7 +19,7 @@ const HeaderCartButton=props=>{
     return(
         <React.Fragment>
         <button className={classes.cartholder} onClick={showCartCtx.showCart}>
-            <span>Cart</span>
+            Cart
             <span className={classes.cartcount}>{cartQuantity}</span>
         </button>
         {showCartCtx.cartState && <Cart/>}

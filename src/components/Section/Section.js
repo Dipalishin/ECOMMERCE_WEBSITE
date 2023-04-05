@@ -12,7 +12,7 @@ const Section=props=>{
 
     return(
         <section className={classes.section}>
-            <div>
+            <div className={classes.header}>
       <h1>The Generics</h1>    </div>
       <MusicAlbums productList={props.productList} />
 

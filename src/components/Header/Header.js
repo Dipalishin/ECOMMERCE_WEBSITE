@@ -1,4 +1,4 @@
-import { NavLink} from "react-bootstrap";
+import {  NavLink } from "react-router-dom";
 import HeaderCartButton from "./HeaderCartButton";
 import classes from './Header.module.css';
 import React from 'react';
@@ -8,23 +8,11 @@ const Header = () => {
     <header className={classes.header}>
       <nav>
         <ul>
-          <li>
-            <NavLink activeClassName={classes.active} to='/home'>
-              HOME
-            </NavLink>
-          </li>
-          <li>
-            <NavLink activeClassName={classes.active} to='/product'>
-              STORE
-            </NavLink>
-          </li>
-          <li>
-            <NavLink activeClassName={classes.active} to='/about'>
-              ABOUT
-            </NavLink>
-          </li>
-          </ul>
-        </nav>
+        <li><NavLink to='/homepage' activeClassName={classes.active}>HOME</NavLink></li>
+            <li><NavLink to='/store' activeClassName={classes.active}>STORE</NavLink></li>
+            <li><NavLink to='/about' activeClassName={classes.active}>ABOUT</NavLink></li>
+        </ul>
+      </nav>
         <div className={classes.button}>
             <HeaderCartButton />
         </div>
