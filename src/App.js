@@ -1,22 +1,24 @@
 import "./App.css";
 import Footer from "./components/Footer/Footer";
 import About from "./components/Pages/About";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Route,Redirect } from "react-router-dom";
 import Homepage from "./components/Pages/Homepage";
-import RootLayout from "./components/Header/Root";
-import Store from "./components/Pages/Store";
+import ContactUs from "./components/Pages/ContactUs";
+import Header from "./components/Header/Header";
+//import RootLayout from "./components/Header/Root";
+//import Store from "./components/Pages/Store";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <RootLayout />,
-    children: [
-      { path: "/homepage", element: <Homepage /> },
-      { path: "/about", element: <About /> },
-      {path:"store",element:<Store/>}
-    ],
-  },
-]);
+// const router = createBrowserRouter([
+//   {
+//     path: "/",
+//     element: <RootLayout />,
+//     children: [
+//       { path: "/homepage", element: <Homepage /> },
+//       { path: "/about", element: <About /> },
+//       {path:"store",element:<Store/>}
+//     ],
+//   },
+// ]);
 
 const productsArr = [
   {
@@ -55,9 +57,25 @@ const productsArr = [
 function App() {
   return (
     <>
-      <RouterProvider router={router} />
+    <Header/>
+   < Route path='/' exact>
+        <Redirect to='/homepage' />
+      </Route>
 
-     <Footer /> 
+      <Route path='/homepage'>
+        <Homepage />
+      </Route>
+
+      <Route path='/about'>
+        <About />
+      </Route>
+
+      <Route path='/contactus'>
+        <ContactUs />
+      </Route>
+
+
+  <Footer /> 
     </>
   );
 }

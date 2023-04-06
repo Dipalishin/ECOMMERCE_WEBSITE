@@ -8,9 +8,11 @@ const Header = () => {
     <header className={classes.header}>
       <nav>
         <ul>
-        <li><NavLink to='/homepage' activeClassName={classes.active}>HOME</NavLink></li>
+        <li><NavLink to='/homepage' activeClassName={classes.active} >HOME</NavLink></li>
             <li><NavLink to='/store' activeClassName={classes.active}>STORE</NavLink></li>
             <li><NavLink to='/about' activeClassName={classes.active}>ABOUT</NavLink></li>
+            <li><NavLink to='/contactus' activeClassName={classes.active}>CONTACT US</NavLink></li>
+
         </ul>
       </nav>
         <div className={classes.button}>
