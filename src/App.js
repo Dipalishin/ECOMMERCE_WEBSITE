@@ -1,10 +1,16 @@
 import "./App.css";
 import Footer from "./components/Footer/Footer";
 import About from "./components/Pages/About";
-import { Route,Redirect } from "react-router-dom";
+import { Route,Redirect,Switch } from "react-router-dom";
 import Homepage from "./components/Pages/Homepage";
 import ContactUs from "./components/Pages/ContactUs";
 import Header from "./components/Header/Header";
+import ProductDetail from "./components/Pages/ProductDetail";
+import Store from "./components/Pages/Store";
+import { ShowCartContextProvider } from "./components/Store/ShowCartContext";
+import { ProductContextProvider} from './components/Store/ProductContext';
+
+
 //import RootLayout from "./components/Header/Root";
 //import Store from "./components/Pages/Store";
 
@@ -22,6 +28,7 @@ import Header from "./components/Header/Header";
 
 const productsArr = [
   {
+    id:'1',
     title: "Colors",
 
     price: 100,
@@ -30,6 +37,8 @@ const productsArr = [
   },
 
   {
+    id:'2',
+
     title: "Black and white Colors",
 
     price: 50,
@@ -38,6 +47,8 @@ const productsArr = [
   },
 
   {
+    id:'3',
+
     title: "Yellow and Black Colors",
 
     price: 70,
@@ -46,6 +57,7 @@ const productsArr = [
   },
 
   {
+    id:'4',
     title: "Blue Color",
 
     price: 100,
@@ -57,8 +69,11 @@ const productsArr = [
 function App() {
   return (
     <>
-    <Header/>
-   < Route path='/' exact>
+      <ShowCartContextProvider>
+        <Header />
+      </ShowCartContextProvider>
+
+      <Route path='/' exact>
         <Redirect to='/homepage' />
       </Route>
 
@@ -66,15 +81,27 @@ function App() {
         <Homepage />
       </Route>
 
+      <Switch>
+        <ProductContextProvider>
+          <ShowCartContextProvider>
+            <Route path='/store' exact>
+<Store productList={productsArr} />
+            </Route>
+          </ShowCartContextProvider>
+
+          <Route path='/store/:id'>
+            <ProductDetail />
+          </Route>
+        </ProductContextProvider>
+      </Switch>
+
       <Route path='/about'>
         <About />
       </Route>
 
-      <Route path='/contactus'>
+      <Route path='/contact'>
         <ContactUs />
       </Route>
-
-
   <Footer /> 
     </>
   );
