@@ -1,0 +1,35 @@
+.div {
+    flex-basis: 30%;
+  flex-wrap: wrap;
+  justify-items: space-around;
+  margin:40px;
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 30px;
+}
+.div img {
+  display: block;
+  margin: auto;
+  margin-bottom: 60px;
+  transform-origin: center center;
+  object-fit: cover;
+  height: 250px;
+  width: 270px;
+  transition: ease-in 0.5s;
+  filter: brightness(100%);
+}
+
+.div h2 {
+  text-align: center;
+  font-family: cursive;
+}
+
+.div span {
+    text-align: left;
+    padding: 10px 20px 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-left: -10px;
+}

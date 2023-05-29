@@ -1,0 +1,41 @@
+.section div {
+    margin: 40px 300px 40px 300px;
+
+}
+.div {
+    background-color: #808080;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+ h1 {
+    text-align: center;
+    padding-bottom: 20px;
+
+    font-size: 100px;
+}
+header{
+    background-color: #777;
+}
+.about{
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: "Metal Mania";
+    text-align: center;
+    padding: 20px;
+
+}
+
+.section div p{
+    font-size: 17px;
+    margin: 20px;
+    color: #777;
+}
+
+.section img {
+    height: 200px;
+    width: 200px;
+    float: left;
+    border-radius: 50%;
+    margin: 30px;
+}

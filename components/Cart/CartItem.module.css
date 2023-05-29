@@ -1,0 +1,47 @@
+.div {
+    display: flex;
+    justify-content: space-around;
+    /* border: 2px solid gray; */
+    /* background-color: #f4f4f4; */
+    margin: 20px;
+    text-align: center;
+    align-items: center;
+}
+
+.div span {
+    margin: 20px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    flex:1;
+    padding: 10px 0 10px 0;
+}
+.cartQuantity{
+    width: 40px;
+    height:30px;
+    border:1px solid rgb(0,204,255);
+    border-radius: 8%;
+    outline: none;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.div img {
+    display: block;
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    flex: 2;
+}
+
+.div button {
+    color: white;
+    font-weight: bold;
+    background-color: rgb(231,76,76);
+    cursor: pointer;
+    border: none;
+    border-radius: 8%;
+    height: 30px;
+    outline: none;
+    padding: 0px 7px;
+    margin-top: 20px;
+}
